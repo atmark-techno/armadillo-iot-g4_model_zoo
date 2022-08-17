@@ -1,6 +1,6 @@
 # Armadillo-IoT G4 model zoo
 
-Armadillo-IoT ゲートウェイ G4のNPU上で動作できるように量子化された機械学習モデルをまとめたリポジトリです。
+Armadillo-IoT ゲートウェイ G4 + NPUで動作が確認できた、量子化された機械学習モデルをまとめたリポジトリです。
 
 ## モデルリスト
 
