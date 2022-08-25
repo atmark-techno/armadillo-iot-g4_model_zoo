@@ -1,12 +1,49 @@
-# Armadillo-IoT G4 model zoo
+# Armadillo-IoT G4 Model Zoo
 
-Armadillo-IoT ゲートウェイ G4 + NPUで動作が確認できた、量子化された機械学習モデルをまとめたリポジトリです。
+[Armadillo-IoT ゲートウェイ G4](https://armadillo.atmark-techno.com/armadillo-iot-g4) + NPUで動作が確認済みの機械学習モデルをまとめたリポジトリです。
 
-## モデルリスト
+各種機械学習モデルの量子化手順と動作確認手順を、Pythonでの実装とともに Google Colaboratory ノートブック形式で紹介します。
+動作確認手順は Armadillo-IoT ゲートウェイ G4 実機上でも同様に動作します。
+
+## 機械学習の推論を Armadillo-IoT ゲートウェイ G4 上で動かしている際の動画
+
+本リポジトリで紹介している機械学習モデルを用いた Armadillo-IoT ゲートウェイ G4 上で動作するデモアプリケーションの動画もYouTubeにアップロードしています。  
+こちらは基本的には本リポジトリで紹介している動作確認手順の実装と同じですが、USBカメラを映像の入力にしています。
+
+<div align="center">
+▼物体検出・姿勢推定・セグメンテーションデモ動画
+<br>
+<a href="https://www.youtube.com/watch?v=gNu7BUy-BoI" >
+<img src="https://user-images.githubusercontent.com/82640976/186608897-3be7f761-8e46-4673-a36f-f35dc60800d9.jpg" width="50%">
+</a>
+<br>
+(<b>画像クリックでYouTubeの動画ページに移動します。</b>)
+<br><br>
+▼超解像・手指検知デモ動画
+<br>
+<a href="https://www.youtube.com/watch?v=E9dYSni7pBc" >
+<img src="https://user-images.githubusercontent.com/82640976/186611414-a236f32a-382c-4ac3-8659-f54e5ad899ef.jpg" width="50%">
+</a>
+<br>
+(<b>画像クリックでYouTubeの動画ページに移動します。</b>)
+</div>
+
+## 物体検出
+
+### ssd_mobilenet_v1
+
+* [モデルDL](http://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip)
+* [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/ObjectDetection_OperationCheck.ipynb)
+
+[Tensorflow Liteの物体検出サンプル](https://www.tensorflow.org/lite/models/object_detection/overview)(当該ページは削除済み)にて使用されているモデルです。COCOデータセットでトレーニングし、uint8で量子化されています。  
+※使用されているモデルは異なりますが、[こちら](https://www.tensorflow.org/lite/examples/object_detection/overview?hl=ja)にTensorflow Liteの物体検出についてのページが新しく作成されています。
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/82640976/186605942-a5514039-eb86-4753-a3e0-7bb673b38f77.png" width="75%">
+</dev>
 
 | ベースモデル | モデルの説明 | DL link | 量子化手順/動作確認手順(Google Colaboratory) |
 |:-:|-|:-:|-|
-| ssd_mobilenet_v1 | [Tensorflow Liteの物体検出サンプル](https://www.tensorflow.org/lite/models/object_detection/overview)(当該ページは削除済み)にて使用されているモデルです。COCOデータセットでトレーニングし、uint8で量子化されています。<br>※使用されているモデルは異なりますが、[こちら](https://www.tensorflow.org/lite/examples/object_detection/overview?hl=ja)にTensorflow Liteの物体検出についてのページが新しく作成されています。 | [モデルDL](http://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip) | [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/ObjectDetection_OperationCheck.ipynb) |
 | posenet | [posenet-python](https://github.com/atomicbits/posenet-python)をベースにtfliteに変換、量子化したモデルです。 | [モデルDL](https://download.atmark-techno.com/armadillo-iot-g4/example/sample-models/posenet.tflite) | [量子化 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/PoseEstimation_Quantize.ipynb)<br>[動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/PoseEstimation_OperationCheck.ipynb) |
 | MediaPipe_Meet_Segmentation | [PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順や、モデルのダウンロード方法などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。 | - | [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/ImageSegmentation_OperationCheck.ipynb) |
 | ESRGAN | [esrgan-tf2](https://tfhub.dev/captain-pool/lite-model/esrgan-tf2/1)をベースにtfliteに変換、量子化したモデルです。 | [モデルDL](https://download.atmark-techno.com/armadillo-iot-g4/example/sample-models/super_resolution.tflite) | [量子化 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/SuperResolution_Quantize.ipynb)<br>[動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/SuperResolution_OperationCheck.ipynb) |
