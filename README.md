@@ -40,11 +40,58 @@
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/82640976/186605942-a5514039-eb86-4753-a3e0-7bb673b38f77.png" width="75%">
-</dev>
+</div>
 
-| ベースモデル | モデルの説明 | DL link | 量子化手順/動作確認手順(Google Colaboratory) |
-|:-:|-|:-:|-|
-| posenet | [posenet-python](https://github.com/atomicbits/posenet-python)をベースにtfliteに変換、量子化したモデルです。 | [モデルDL](https://download.atmark-techno.com/armadillo-iot-g4/example/sample-models/posenet.tflite) | [量子化 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/PoseEstimation_Quantize.ipynb)<br>[動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/PoseEstimation_OperationCheck.ipynb) |
-| MediaPipe_Meet_Segmentation | [PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順や、モデルのダウンロード方法などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。 | - | [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/ImageSegmentation_OperationCheck.ipynb) |
-| ESRGAN | [esrgan-tf2](https://tfhub.dev/captain-pool/lite-model/esrgan-tf2/1)をベースにtfliteに変換、量子化したモデルです。 | [モデルDL](https://download.atmark-techno.com/armadillo-iot-g4/example/sample-models/super_resolution.tflite) | [量子化 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/SuperResolution_Quantize.ipynb)<br>[動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/SuperResolution_OperationCheck.ipynb) |
-| MediaPipe_Hands | [PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順や、モデルのダウンロード方法などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。<br>モデルの詳細については、[MediaPipe Hands Model Card](https://mediapipe.page.link/blazepose-mc)を参照してください。 | - | [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/HandEstimation_OperationCheck.ipynb) |
+## 骨格推定
+
+### posenet
+
+* [モデルDL](https://download.atmark-techno.com/armadillo-iot-g4/example/sample-models/posenet.tflite)
+* [量子化 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/PoseEstimation_Quantize.ipynb)
+* [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/PoseEstimation_OperationCheck.ipynb)
+
+[posenet-python](https://github.com/atomicbits/posenet-python)をベースにtfliteに変換、量子化したモデルです。
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/82640976/186803220-de78f998-4f26-4bb9-987e-790a6f90e132.png" width="75%">
+</div>
+
+## セマンティックセグメンテーション
+
+### MediaPipe_Meet_Segmentation
+
+* [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/ImageSegmentation_OperationCheck.ipynb)
+
+[PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順や、モデルのダウンロード方法などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/82640976/186804263-fd2e74bb-0c3c-4050-aa55-ae34722b9093.png" width="75%">
+</div>
+
+## 超解像
+
+### ESRGAN
+
+* [モデルDL](https://download.atmark-techno.com/armadillo-iot-g4/example/sample-models/super_resolution.tflite)
+* [量子化 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/SuperResolution_Quantize.ipynb)
+* [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/SuperResolution_OperationCheck.ipynb)
+
+[esrgan-tf2](https://tfhub.dev/captain-pool/lite-model/esrgan-tf2/1)をベースにtfliteに変換、量子化したモデルです。
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/82640976/186805749-b18984c6-8d15-461f-a5b4-872f13a1bb49.png" width="75%">
+</div>
+
+## 手指検知
+
+### MediaPipe_Hands
+
+* [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/HandEstimation_OperationCheck.ipynb)
+
+[PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順や、モデルのダウンロード方法などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。  
+モデルの詳細については、[MediaPipe Hands Model Card](https://mediapipe.page.link/blazepose-mc)を参照してください。
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/82640976/186815999-9ec4d0a5-4f55-405b-9797-32de29467ca9.png" width="75%">
+</div>
+
