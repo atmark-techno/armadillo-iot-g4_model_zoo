@@ -42,6 +42,9 @@
 [Tensorflow Liteの物体検出サンプル](https://www.tensorflow.org/lite/models/object_detection/overview)(当該ページは削除済み)にて使用されているモデルです。COCOデータセットでトレーニングし、uint8で量子化されています。  
 ※使用されているモデルは異なりますが、[こちら](https://www.tensorflow.org/lite/examples/object_detection/overview?hl=ja)にTensorflow Liteの物体検出についてのページが新しく作成されています。
 
+入力画像上の「どこに」、「何が」あるかを認識し、バウンディングボックスで表示できます。  
+認識可能な物体は90種類あります。
+
 <div align="center">
 <img src="https://user-images.githubusercontent.com/82640976/186605942-a5514039-eb86-4753-a3e0-7bb673b38f77.png" width="75%">
 </div>
@@ -56,6 +59,9 @@
 
 [posenet-python](https://github.com/atomicbits/posenet-python)をベースにtfliteに変換、量子化したモデルです。
 
+入力画像に写った人間の骨格(両目、鼻、両耳、両肩、両肘、両手首、両腰、両膝、両足首の計17点)を検知して表示します。  
+最大10人の骨格を一度に推定できます。
+
 <div align="center">
 <img src="https://user-images.githubusercontent.com/82640976/186803220-de78f998-4f26-4bb9-987e-790a6f90e132.png" width="75%">
 </div>
@@ -67,6 +73,9 @@
 * [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/ImageSegmentation_OperationCheck.ipynb)
 
 [PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順や、モデルのダウンロード方法などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。
+
+入力画像の各画素ごとに、そこに写っているものは何かを推定し、人間が写っている領域を赤く色付けします。  
+Google Meetのバーチャル背景のために使用されているモデルをベースとしていおり、人間の領域を綺麗に推定するために、人間以外の付近の物を検出する場合もあります。
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/82640976/186804263-fd2e74bb-0c3c-4050-aa55-ae34722b9093.png" width="75%">
@@ -82,6 +91,8 @@
 
 [esrgan-tf2](https://tfhub.dev/captain-pool/lite-model/esrgan-tf2/1)をベースにtfliteに変換、量子化したモデルです。
 
+50x50の解像度の画像を入力することで、200x200の解像度の画像を生成します。
+
 <div align="center">
 <img src="https://user-images.githubusercontent.com/82640976/186805749-b18984c6-8d15-461f-a5b4-872f13a1bb49.png" width="75%">
 </div>
@@ -94,6 +105,15 @@
 
 [PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順や、モデルのダウンロード方法などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。  
 モデルの詳細については、[MediaPipe Hands Model Card](https://mediapipe.page.link/blazepose-mc)を参照してください。
+
+以下の流れで手指の検出を行ないます。
+
+1. 入力画像から手の領域を検出
+1. 検出した領域を入力画像として骨格推定
+1. 推定結果を元の入力画像に描画
+
+このデモの特徴としまして、機械学習モデルを2つ(手の領域検出、手の骨格推定)使用しています。  
+Armadillo-IoT ゲートウェイ G4上でも複数モデルをロードして推論を行なうことができます。
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/82640976/186815999-9ec4d0a5-4f55-405b-9797-32de29467ca9.png" width="75%">
