@@ -34,7 +34,7 @@
 </div>
 <br>
 
-これらのデモアプリケーションは、Armadillo-IoT ゲートウェイ G4 上でどなたでもお試しいただけます。
+これらのデモアプリケーションは、Armadillo-IoT ゲートウェイ G4 上で実際に動かすことができます。
 詳しくは、「[Armadillo-IoT ゲートウェイ G4 製品マニュアル](https://armadillo.atmark-techno.com/resources/documents/armadillo-iot-g4/manuals)」内の「デモアプリケーションを実行する」を参照してください。
 
 ## 物体検出
