@@ -8,24 +8,29 @@
 ## 機械学習の推論を Armadillo-IoT ゲートウェイ G4 上で動かしている際の動画
 
 本リポジトリで紹介している機械学習モデルを用いた Armadillo-IoT ゲートウェイ G4 上で動作するデモアプリケーションの動画もYouTubeにアップロードしています。  
-こちらは基本的には本リポジトリで紹介している動作確認手順の実装と大枠は同じですが、画面構成の変更や映像入力をUSBカメラにするなどの変更が加わっています。
+こちらは基本的には本リポジトリで紹介している動作確認手順の実装と大枠は同じですが、画面構成の変更や映像入力をUSBカメラにするなどの変更が加わっています。  
+
+<table>
+<tr>
+<td>▼物体検出・姿勢推定・セグメンテーションデモ動画</td>
+<td>▼超解像・手指検知デモ動画</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.youtube.com/watch?v=gNu7BUy-BoI" >
+<img src="https://user-images.githubusercontent.com/82640976/186608897-3be7f761-8e46-4673-a36f-f35dc60800d9.jpg">
+</a>
+</td>
+<td>
+<a href="https://www.youtube.com/watch?v=E9dYSni7pBc" >
+<img src="https://user-images.githubusercontent.com/82640976/186611414-a236f32a-382c-4ac3-8659-f54e5ad899ef.jpg">
+</a>
+</td>
+</tr>
+</table>
 
 <div align="center">
-▼物体検出・姿勢推定・セグメンテーションデモ動画
-<br>
-<a href="https://www.youtube.com/watch?v=gNu7BUy-BoI" >
-<img src="https://user-images.githubusercontent.com/82640976/186608897-3be7f761-8e46-4673-a36f-f35dc60800d9.jpg" width="50%">
-</a>
-<br>
-(<b>画像クリックでYouTubeの動画ページに移動します。</b>)
-<br><br>
-▼超解像・手指検知デモ動画
-<br>
-<a href="https://www.youtube.com/watch?v=E9dYSni7pBc" >
-<img src="https://user-images.githubusercontent.com/82640976/186611414-a236f32a-382c-4ac3-8659-f54e5ad899ef.jpg" width="50%">
-</a>
-<br>
-(<b>画像クリックでYouTubeの動画ページに移動します。</b>)
+<b>画像クリックでYouTubeの動画ページに移動します。</b>
 </div>
 <br>
 
