@@ -75,9 +75,10 @@
 
 ### MediaPipe_Meet_Segmentation
 
+* [モデルDL](https://drive.google.com/uc?export=download&id=1pc1VbroTkMOJafcQNLouMVFou4Hahdhw)
 * [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/ImageSegmentation_OperationCheck.ipynb)
 
-[PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順や、モデルのダウンロード方法などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。
+[PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。
 
 入力画像の各画素ごとに、そこに写っているものは何かを推定し、人間が写っている領域を赤く色付けします。  
 Google Meetのバーチャル背景のために使用されているモデルをベースとしていおり、人間の領域を綺麗に推定するために、人間以外の付近の物を検出する場合もあります。
@@ -106,9 +107,11 @@ Google Meetのバーチャル背景のために使用されているモデルを
 
 ### MediaPipe_Hands
 
+* [モデルDL(手の領域検出)](https://drive.google.com/uc?export=download&id=1yjWyXsac5CbGWYuHWYhhnr_9cAwg3uNI)
+* [モデルDL(手の骨格検知)](https://drive.google.com/uc?export=download&id=1E_eUtAqzZ1xsVtOzXSlnDDzlwLTvn2Zk)
 * [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/HandEstimation_OperationCheck.ipynb)
 
-[PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順や、モデルのダウンロード方法などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。  
+[PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。  
 モデルの詳細については、[MediaPipe Hands Model Card](https://mediapipe.page.link/blazepose-mc)を参照してください。
 
 以下の流れで手指の検出を行ないます。
