@@ -75,7 +75,7 @@
 
 ### MediaPipe_Meet_Segmentation
 
-* [モデルDL](https://drive.google.com/uc?export=download&id=1pc1VbroTkMOJafcQNLouMVFou4Hahdhw)
+* [モデルDLスクリプト](https://raw.githubusercontent.com/PINTO0309/PINTO_model_zoo/main/082_MediaPipe_Meet_Segmentation/download_full_144x256.sh)
 * [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/ImageSegmentation_OperationCheck.ipynb)
 
 [PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。
@@ -107,8 +107,8 @@ Google Meetのバーチャル背景のために使用されているモデルを
 
 ### MediaPipe_Hands
 
-* [モデルDL(手の領域検出)](https://drive.google.com/uc?export=download&id=1yjWyXsac5CbGWYuHWYhhnr_9cAwg3uNI)
-* [モデルDL(手の骨格検知)](https://drive.google.com/uc?export=download&id=1E_eUtAqzZ1xsVtOzXSlnDDzlwLTvn2Zk)
+* [モデルDLスクリプト(手の領域検出)](https://raw.githubusercontent.com/PINTO0309/PINTO_model_zoo/main/033_Hand_Detection_and_Tracking/03_integer_quantization/download.sh)
+* [モデルDLスクリプト(手の骨格検知)](https://raw.githubusercontent.com/PINTO0309/PINTO_model_zoo/main/033_Hand_Detection_and_Tracking/03_integer_quantization/download_new.sh)
 * [動作確認 Colab Note](https://colab.research.google.com/github/atmark-techno/armadillo-iot-g4_model_zoo/blob/main/GoogleColabNotebooks/HandEstimation_OperationCheck.ipynb)
 
 [PINTO0309](https://github.com/PINTO0309)様がtfliteに変換、量子化したモデルです。具体的な量子化手順などの詳細は[PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/082_MediaPipe_Meet_Segmentation)を参照してください。  
